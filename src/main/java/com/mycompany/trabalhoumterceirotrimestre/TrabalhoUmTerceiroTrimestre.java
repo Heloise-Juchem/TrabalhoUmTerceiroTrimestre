@@ -3,6 +3,7 @@ package com.mycompany.trabalhoumterceirotrimestre;
 //import com.mycompany.exercicios.Produto;
 //import com.mycompany.exercicios.Livros;
 //import com.mycompany.exercicios.Veiculo;
+import com.mycompany.exercicios.carteiraDigitel;
 
 public class TrabalhoUmTerceiroTrimestre {
 
@@ -39,5 +40,9 @@ public class TrabalhoUmTerceiroTrimestre {
         //System.out.printf("%s", kombi.registrarViagem((double) 500));
         //System.out.printf("%S", kombi.exibirDados());
 
+        carteiraDigitel ana = new carteiraDigitel("Ana", 5000.00, 300);
+        carteiraDigitel bruno = new carteiraDigitel("Bruno",6000.00, 100);
+        System.out.printf("%s", ana.receber());
+        System.out.printf("curso", args);
     }
 }

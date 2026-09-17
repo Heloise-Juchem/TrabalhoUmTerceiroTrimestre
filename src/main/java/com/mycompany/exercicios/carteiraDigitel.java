@@ -1,13 +1,39 @@
 package com.mycompany.exercicios;
 
+
 public class carteiraDigitel {
     public String titular;
-    public Float saldo;
-    public Double num_transacoes;
-    
-    public carteiraDigitel(String titular, Float saldo, Double num_transacoes){
+    public Double saldo;
+    public Integer numeroTransacoes;
+   
+   
+    public carteiraDigitel(String titular, Double saldo, Integer numeroTransacoes){
         this.titular = titular;
         this.saldo = saldo;
-        this.num_transacoes = num_transacoes;
+        this.numeroTransacoes = numeroTransacoes;
+ 
+    }
+   
+    public String receber(double valor){
+        this.saldo += valor;
+        this.numeroTransacoes += 1;
+        return "\n Saldo atualizado!";
+    }
+   
+    public String pagar(double valor){
+        if(this.saldo >= 0 && valor <= this.saldo){
+            this.saldo -= valor;
+            return "\nO valor é positivo!" + "\nSaldo suficiente!";
+        }else{
+            return "\nO valor é negativo!" + "\nSaldo insuficiente!";
+        }
+    }
+   
+    public String consultarSaldo(){
+        return "\n Saldo: " + this.saldo;
+    }
+   
+    public String exibirExtrato(){
+        return "\nTitular: " + this.titular + "\nSaldo: " + this.saldo +  "\nNúmero de Transações: " + this.numeroTransacoes;
     }
 }
