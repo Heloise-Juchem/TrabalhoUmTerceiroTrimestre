@@ -40,9 +40,24 @@ public class TrabalhoUmTerceiroTrimestre {
         //System.out.printf("%s", kombi.registrarViagem((double) 500));
         //System.out.printf("%S", kombi.exibirDados());
 
-        carteiraDigitel ana = new carteiraDigitel("Ana", 5000.00, 300);
-        carteiraDigitel bruno = new carteiraDigitel("Bruno",6000.00, 100);
-        System.out.printf("%s", ana.receber());
-        System.out.printf("curso", args);
+        carteiraDigitel ana = new carteiraDigitel("Ana Barramas claro", 5000.00, 10);
+        carteiraDigitel joana = new carteiraDigitel("joana Pitágoras", 200000.00, 3);
+        carteiraDigitel hanna = new carteiraDigitel("Hanna Montana", 20.00, 3);
+       
+       
+        System.out.printf("%s", ana.receber(400));
+        System.out.printf("%s", ana.pagar(300.00));
+        System.out.printf("%s", ana.consultarSaldo());
+        System.out.printf("%s", ana.exibirExtrato());
+        System.out.printf("%s", joana.receber(100000));
+        System.out.printf("%s", joana.pagar(400.00));
+        System.out.printf("%s", joana.consultarSaldo());
+        System.out.printf("%s", joana.exibirExtrato());
+         System.out.printf("%s",hanna.receber(1));
+        System.out.printf("%s", hanna.pagar(400.00));
+        System.out.printf("%s", hanna.consultarSaldo());
+        System.out.printf("%s", hanna.exibirExtrato());
+       
     }
+
 }
